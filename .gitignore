@@ -1,3 +1,5 @@
 config.json
-/outputs/*
 /inputs/*
+!/inputs/.gitkeep
+/outputs/*
+!/outputs/.gitkeep
