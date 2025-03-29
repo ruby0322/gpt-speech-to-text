@@ -1,5 +1,9 @@
 # GPT Speech to Text
 
+[繁體中文](#繁體中文) | [简体中文](#简体中文) | [English](#english)
+
+# 繁體中文
+
 一個使用 OpenAI Whisper API 將音訊檔轉換成文字的工具。支援長音訊自動分段處理，適合處理演講、課程等長時間錄音。
 
 ## 功能特點
@@ -44,17 +48,94 @@ python transcribe.py input.mp3 --output_dir ./my_outputs
 python transcribe.py input.mp3 --chunk-size 30000
 ```
 
-## 檔案結構
+# 简体中文
 
-- `transcribe.py`: 主程式
-- `convert.py`: 音訊格式轉換工具
-- `config.example.json`: API 設定範本
-- `config.json`: 實際 API 設定（請勿提交到版本控制）
-- `inputs/`: 輸入音訊檔案目錄
-- `outputs/`: 輸出文字檔案目錄
+一个使用 OpenAI Whisper API 将音频文件转换成文字的工具。支持长音频自动分段处理，适合处理演讲、课程等长时间录音。
 
-## 注意事項
+## 功能特点
 
-- 請確保 config.json 已正確設定 API Key
-- 長音訊檔案會依據 chunk-size 分段處理
-- 支援的輸入格式取決於 ffmpeg 支援的格式
+- 支持多种音频格式 (mp3, m4a 等)
+- 自动分段处理长音频
+- 输出文字文件与输入文件同名
+- 可自定义分段大小
+
+## 安装步骤
+
+1. 安装依赖包：
+```bash
+pip install openai pydub
+```
+
+2. 安装 ffmpeg（必要）：
+   - macOS: `brew install ffmpeg`
+   - Ubuntu: `sudo apt-get install ffmpeg`
+   - Windows: 从 [ffmpeg 官网](https://ffmpeg.org/download.html) 下载
+
+3. 设置 OpenAI API Key：
+```bash
+cp config.example.json config.json
+```
+编辑 config.json，填入您的 OpenAI API Key
+
+## 使用方法
+
+基本使用：
+```bash
+python transcribe.py input.mp3
+```
+
+指定输出目录：
+```bash
+python transcribe.py input.mp3 --output_dir ./my_outputs
+```
+
+调整分段大小（默认 60 秒）：
+```bash
+python transcribe.py input.mp3 --chunk-size 30000
+```
+
+# English
+
+A tool that uses the OpenAI Whisper API to convert audio files to text. Supports automatic segmentation of long audio files, suitable for processing lectures, courses, and other long recordings.
+
+## Features
+
+- Supports multiple audio formats (mp3, m4a, etc.)
+- Automatic segmentation of long audio files
+- Output text file name matches input file name
+- Customizable segment size
+
+## Installation
+
+1. Install dependencies:
+```bash
+pip install openai pydub
+```
+
+2. Install ffmpeg (required):
+   - macOS: `brew install ffmpeg`
+   - Ubuntu: `sudo apt-get install ffmpeg`
+   - Windows: Download from [ffmpeg website](https://ffmpeg.org/download.html)
+
+3. Configure OpenAI API Key:
+```bash
+cp config.example.json config.json
+```
+Edit config.json and enter your OpenAI API Key
+
+## Usage
+
+Basic usage:
+```bash
+python transcribe.py input.mp3
+```
+
+Specify output directory:
+```bash
+python transcribe.py input.mp3 --output_dir ./my_outputs
+```
+
+Adjust chunk size (default 60 seconds):
+```bash
+python transcribe.py input.mp3 --chunk-size 30000
+```
