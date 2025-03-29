@@ -8,7 +8,6 @@
 
 ## 功能特點
 
-- 支援多種音訊格式 (mp3, m4a 等)
 - 自動分段處理長音訊
 - 輸出文字檔與輸入檔案同名
 - 可自訂分段大小
@@ -54,7 +53,6 @@ python transcribe.py input.mp3 --chunk-size 30000
 
 ## 功能特点
 
-- 支持多种音频格式 (mp3, m4a 等)
 - 自动分段处理长音频
 - 输出文字文件与输入文件同名
 - 可自定义分段大小
@@ -100,7 +98,6 @@ A tool that uses the OpenAI Whisper API to convert audio files to text. Supports
 
 ## Features
 
-- Supports multiple audio formats (mp3, m4a, etc.)
 - Automatic segmentation of long audio files
 - Output text file name matches input file name
 - Customizable segment size
